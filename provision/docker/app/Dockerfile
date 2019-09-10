@@ -15,7 +15,8 @@ ENV PACKAGES bash \
   openssl \
   gcc \
   libgdal20 \
-  libev-dev
+  libev-dev \
+  libmagic-dev
 
 
 COPY Pipfile* /usr/src/
