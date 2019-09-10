@@ -22,7 +22,7 @@ def test_filter_email():
         "headers": {"Authorization": "Bearer {}".format(params["access_token"])},
         "method": "get",
     }
-    assert_that(response, has_entries(user.response))
+    assert_that(response, has_entries(user.response), user)
 
 
 def test_get_by_id():
@@ -71,4 +71,4 @@ def test_update_user():
         "data": body,
         "method": "put",
     }
-    assert_that(response, has_entries(user.response))
+    assert_that(response, has_entries(user.response), user)
