@@ -1,0 +1,34 @@
+# Docker Compose
+# https://docs.docker.com/compose/
+# Usage: docker-compose up
+---
+version: "3.6"
+
+services:
+
+  app:
+    ports:
+      - "8000:8000"
+      - "8080:5000"
+    build:
+      context: .
+      dockerfile: provision/docker/app/Dockerfile
+    environment: &environment
+      - STAGE=local
+    volumes:
+      - .:/usr/src
+    env_file:
+      - .env
+
+  docs:
+    restart: always
+    image: pyfacebook-app-docs
+    build:
+      context: .
+      dockerfile: provision/docker/docs/Dockerfile
+    volumes:
+      - .:/usr/src
+    env_file:
+      - .env
+    depends_on:
+      - app
