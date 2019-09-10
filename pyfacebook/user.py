@@ -41,8 +41,5 @@ class User(Workplace):
         Output:
           Response from API as <dict>
         """
-        kwargs = {}
-        kwargs["url_request"] = "/{}".format(user_id)
-        kwargs["data"] = data
-        kwargs["method"] = "put"
+        kwargs = {"url_request": "/{}".format(user_id), "data": data, "method": "put"}
         return self.send_raw(**kwargs)
