@@ -1,0 +1,36 @@
+# Config file for automatic testing at travis-ci.org
+
+sudo: true
+dist: trusty
+
+services:
+  - docker
+
+language: python
+
+python:
+  - "3.4"
+  - "3.5"
+  - "3.6"
+
+env:
+  - DOCKER_COMPOSE_VERSION=1.16.1
+
+before_install:
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose-bin
+  - chmod +x docker-compose-bin
+  - sudo mv docker-compose-bin /usr/local/bin/docker-compose
+  - docker-compose -v
+  - docker -v
+
+install:
+  - cp .env-sample .env
+  - make build env=test
+
+before_script:
+  - make install env=test
+  - make lint
+
+script:
+    - make test
