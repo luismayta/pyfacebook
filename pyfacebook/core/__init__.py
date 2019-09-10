@@ -68,7 +68,10 @@ class Base(BaseMixin):
         if DEBUG:
             self._response = kwargs
             return self._response
-        kwargs["method"] = kwargs.get("method").upper()
+
+        if kwargs.get("method"):
+            kwargs["method"] = kwargs.get("method").upper()
+
         self._response = requests.request(**kwargs)
         return self._response
 
