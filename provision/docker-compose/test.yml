@@ -10,6 +10,7 @@ services:
     image: pyfacebook-app-test
     environment: &environment
       - STAGE=test
+      - PYFACEBOOK_DEBUG=True
     build:
       args:
         stage: test

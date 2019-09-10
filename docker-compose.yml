@@ -15,6 +15,7 @@ services:
       dockerfile: provision/docker/app/Dockerfile
     environment: &environment
       - STAGE=local
+      - PYFACEBOOK_DEBUG=True
     volumes:
       - .:/usr/src
     env_file:
