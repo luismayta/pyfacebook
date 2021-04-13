@@ -27,9 +27,9 @@ class Page:
     _after_send = None
 
     def __init__(self, page_access_token, **options):
-        """ Webhook_handlers.
-            contains optin, message, echo, delivery, postback, read,
-            account_linking, referral.
+        """Webhook_handlers.
+        contains option, message, echo, delivery, postback, read,
+        account_linking, referral.
         """
         self.page_access_token = page_access_token
         self._after_send = options.pop("after_send", None)
@@ -45,7 +45,7 @@ class Page:
     def handle_webhook(
         self,
         payload,
-        optin=None,
+        option=None,
         message=None,
         echo=None,
         delivery=None,
@@ -69,8 +69,8 @@ class Page:
                     yield event
 
         for event in get_events(data):
-            if event.is_optin:
-                self._call_handler("optin", optin, event)
+            if event.is_option:
+                self._call_handler("option", option, event)
             elif event.is_echo:
                 self._call_handler("echo", echo, event)
             elif event.is_quick_reply:
@@ -100,8 +100,8 @@ class Page:
     decorations
     """
 
-    def handle_optin(self, func):
-        self._webhook_handlers["optin"] = func
+    def handle_option(self, func):
+        self._webhook_handlers["option"] = func
 
     def handle_message(self, func):
         self._webhook_handlers["message"] = func
