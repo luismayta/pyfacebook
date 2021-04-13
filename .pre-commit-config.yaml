@@ -5,7 +5,7 @@ default_language_version:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit
-    rev: v2.11.1
+    rev: v2.12.0
     hooks:
       - id: validate_manifest
   - repo: https://github.com/codespell-project/codespell
@@ -95,7 +95,7 @@ repos:
     hooks:
       - id: docker-compose-check
   - repo: https://github.com/hadenlabs/pre-commit-hooks
-    rev: 76c5359a5e3736a81b34a38865ef746d5ff46bc3
+    rev: dbe194587e5bbeb7327b9e8e281791108d185e75
     hooks:
       - id: do-not-commit
       - id: markdown-link-check
