@@ -1,0 +1,44 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: pyfacebook
+
+email:
+  support: support@hadenlabs.com
+
+# Logo for this project
+#logo: docs/logo.png
+
+# License of this project
+license: 'LGPL-3.0'
+
+# Canonical GitHub repo
+github_repo: luismayta/pyfacebook
+
+# Badges to display
+badges:
+  - name: GitHub tag (latest SemVer)
+    image: https://img.shields.io/github/v/tag/luismayta/pyfacebook.svg?label=latest&sort=semver
+    url: https://github.com/luismayta/pyfacebook/releases
+  - name: Lint
+    image: https://github.com/luismayta/pyfacebook/actions/workflows/lint.yml/badge.svg?branch=develop
+    url: https://github.com/luismayta/pyfacebook/actions
+  - name: Issues
+    image: https://img.shields.io/github/issues/luismayta/pyfacebook.svg
+    url: https://github.com/luismayta/pyfacebook/issues
+  - name: Latest Release
+    image: https://img.shields.io/github/release/luismayta/pyfacebook.svg
+    url: https://github.com/luismayta/pyfacebook/releases
+
+# Short description of this project
+description: |-
+  pyfacebook library for python.
+
+requirements: |-
+
+include:
+  - 'docs/examples/common.md'
