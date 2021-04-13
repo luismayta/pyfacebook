@@ -137,8 +137,7 @@ class Facebook(Base):
 
     @property
     def auth_args(self):
-        """Make auth args validation
-        """
+        """Make auth args validation"""
         if not self._auth_args:
             self._auth_args = {"access_token": self.access_token}
         return self._auth_args

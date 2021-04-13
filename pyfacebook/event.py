@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-class Event(object):
+class Event:
     def __init__(self, messaging=None):
         if messaging is None:
             messaging = {}
@@ -46,8 +46,8 @@ class Event(object):
         return self.messaging.get("postback", {}).get("referral", {})
 
     @property
-    def optin(self):
-        return self.messaging.get("optin", {})
+    def option(self):
+        return self.messaging.get("option", {})
 
     @property
     def account_linking(self):
@@ -74,8 +74,8 @@ class Event(object):
         return self.messaging.get("message", {}).get("seq", None)
 
     @property
-    def is_optin(self):
-        return "optin" in self.messaging
+    def is_option(self):
+        return "option" in self.messaging
 
     @property
     def is_message(self):
