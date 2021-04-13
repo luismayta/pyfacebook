@@ -1,9 +1,6 @@
-FROM python:3.7.3-slim
-
-MAINTAINER Luis Mayta <@slovacus>
+FROM hadenlabs/python:3.8.0-slim
 
 ARG stage
-ARG version
 LABEL NAME pyfacebook-check-$stage
 
 COPY Pipfile* /usr/src/
@@ -17,7 +14,7 @@ RUN apt-get update -y \
   git-core \
   shellcheck \
   # install python dependencies
-  && pip3 install pipenv \
+  && pip3 install --no-cache-dir pipenv \
   && pipenv install --dev --skip-lock \
   && apt-get purge \
   && apt-get autoremove -y \
