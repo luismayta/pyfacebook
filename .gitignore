@@ -1,9 +1,6 @@
 
-# Created by https://www.gitignore.io/api/go,node,python,ansible
-# Edit at https://www.gitignore.io/?templates=go,node,python,ansible
-
-### Ansible ###
-*.retry
+# Created by https://www.toptal.com/developers/gitignore/api/python,node,go,zsh
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,node,go,zsh
 
 ### Go ###
 # Binaries for programs and plugins
@@ -82,6 +79,15 @@ typings/
 # Optional eslint cache
 .eslintcache
 
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
 # Optional REPL history
 .node_repl_history
 
@@ -94,15 +100,32 @@ typings/
 # dotenv environment variables file
 .env
 .env.test
+.env*.local
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
+.parcel-cache
 
-# next.js build output
+# Next.js build output
 .next
 
-# nuxt.js build output
+# Nuxt.js build / generate output
 .nuxt
+dist
+
+# Storybook build outputs
+.out
+.storybook-out
+storybook-static
+
+# rollup.js default build output
+dist/
+
+# Gatsby files
+.cache/
+# Comment in the public line in if your project uses Gatsby and not Next.js
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# public
 
 # vuepress build output
 .vuepress/dist
@@ -116,6 +139,16 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Temporary folders
+tmp/
+temp/
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -128,12 +161,9 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
 parts/
 sdist/
 var/
@@ -164,8 +194,10 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
+*.py,cover
 .hypothesis/
 .pytest_cache/
+pytestdebug.log
 
 # Translations
 *.mo
@@ -185,6 +217,7 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+doc/_build/
 
 # PyBuilder
 target/
@@ -206,19 +239,29 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
-# celery beat schedule file
+# poetry
+#poetry.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
 celerybeat-schedule
+celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
 
 # Environments
-.venv
+# .env
+.env/
+.venv/
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+pythonenv*
 
 # Spyder project settings
 .spyderproject
@@ -238,4 +281,47 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# End of https://www.gitignore.io/api/go,node,python,ansible
+# pytype static type analyzer
+.pytype/
+
+# operating system-related files
+# file properties cache/storage on macOS
+*.DS_Store
+# thumbnail cache on Windows
+Thumbs.db
+
+# profiling data
+.prof
+
+
+### Zsh ###
+# Zsh compiled script + zrecompile backup
+*.zwc
+*.zwc.old
+
+# Zsh completion-optimization dumpfile
+*zcompdump*
+
+# Zsh zcalc history
+.zcalc_history
+
+# A popular plugin manager's files
+._zinit
+.zinit_lstupd
+
+# zdharma/zshelldoc tool's files
+zsdoc/data
+
+# robbyrussell/oh-my-zsh/plugins/per-directory-history plugin's files
+# (when set-up to store the history in the local directory)
+.directory_history
+
+# MichaelAquilina/zsh-autoswitch-virtualenv plugin's files
+# (for Zsh plugins using Python)
+.venv
+
+# Zunit tests' output
+/tests/_output/*
+!/tests/_output/.gitkeep
+
+# End of https://www.toptal.com/developers/gitignore/api/python,node,go,zsh
