@@ -23,12 +23,10 @@ repos:
     rev: v1.2.1
     hooks:
       - id: python-safety-dependencies-check
-  - repo: https://github.com/Lucas-C/pre-commit-hooks-bandit
-    rev: v1.0.5
+  - repo: https://github.com/PyCQA/flake8
+    rev: 3.9.1
     hooks:
-      - id: python-bandit-vulnerability-check
-        args: []
-        files: .py$
+      - id: flake8
   - repo: https://github.com/ambv/black
     rev: 20.8b1
     hooks:
@@ -77,10 +75,6 @@ repos:
       - id: blacken-docs
         additional_dependencies:
           - black
-  - repo: https://github.com/IamTheFij/docker-pre-commit
-    rev: v2.0.0
-    hooks:
-      - id: docker-compose-check
   - repo: https://github.com/hadenlabs/pre-commit-hooks
     rev: ab7a684f0ab65a90038ea540eaa2afbed1b246be
     hooks:
@@ -92,6 +86,8 @@ repos:
         args:
           - --exclude=SC1072,SC1073,SC2068
       - id: todocheck
+      # docker validation
+      - id: docker-compose-check
       - id: hadolint
         args:
           - --ignore=SC2001
