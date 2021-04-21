@@ -14,7 +14,7 @@
 
 # pyfacebook
 
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/luismayta/pyfacebook.svg?label=latest&sort=semver)](https://github.com/luismayta/pyfacebook/releases) [![Lint](https://github.com/luismayta/pyfacebook/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/luismayta/pyfacebook/actions) [![Issues](https://img.shields.io/github/issues/luismayta/pyfacebook.svg)](https://github.com/luismayta/pyfacebook/issues) [![Latest Release](https://img.shields.io/github/release/luismayta/pyfacebook.svg)](https://github.com/luismayta/pyfacebook/releases)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/luismayta/pyfacebook.svg?label=latest&sort=semver)](https://github.com/luismayta/pyfacebook/releases) [![Code style black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black) [![Lint](https://github.com/luismayta/pyfacebook/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/luismayta/pyfacebook/actions) [![Issues](https://img.shields.io/github/issues/luismayta/pyfacebook.svg)](https://github.com/luismayta/pyfacebook/issues) [![Latest Release](https://img.shields.io/github/release/luismayta/pyfacebook.svg)](https://github.com/luismayta/pyfacebook/releases)
 
 pyfacebook library for python.
 
