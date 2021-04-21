@@ -5,7 +5,7 @@ default_language_version:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit
-    rev: v2.12.0
+    rev: v2.12.1
     hooks:
       - id: validate_manifest
   - repo: https://github.com/codespell-project/codespell
@@ -24,20 +24,11 @@ repos:
     hooks:
       - id: python-safety-dependencies-check
   - repo: https://github.com/Lucas-C/pre-commit-hooks-bandit
-    rev: v1.0.4
+    rev: v1.0.5
     hooks:
       - id: python-bandit-vulnerability-check
         args: []
         files: .py$
-  - repo: https://github.com/pre-commit/mirrors-pylint
-    rev: v3.0.0a1
-    hooks:
-      - id: pylint
-        exclude: __pycache__|migrations|conf.py|_build|.tox|pootle/static|pootle/translations|pootle/locale|pootle/assets|templates
-        args:
-          - --rcfile=.github/linters/.pylintrc
-          - --disable=no-name-in-module,import-error,ungrouped-imports
-          - --ignore=settings_test, migrations
   - repo: https://github.com/ambv/black
     rev: 20.8b1
     hooks:
@@ -91,7 +82,7 @@ repos:
     hooks:
       - id: docker-compose-check
   - repo: https://github.com/hadenlabs/pre-commit-hooks
-    rev: dbe194587e5bbeb7327b9e8e281791108d185e75
+    rev: ab7a684f0ab65a90038ea540eaa2afbed1b246be
     hooks:
       - id: do-not-commit
       - id: markdown-link-check
