@@ -58,7 +58,7 @@ setup(
         "PyHamcrest==1.10.1",
         "pytest-cov",
         "pytest-flask",
-        "pytest-mock==1.9.0",
+        "pytest-mock==1.13.0",
         "pytest-runner",
     ],
     extras_require={
