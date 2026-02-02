@@ -55,7 +55,7 @@ setup(
     install_requires=required,
     tests_require=[
         "pytest>=3.7.2",
-        "PyHamcrest==1.10.1",
+        "PyHamcrest==2.1.0",
         "pytest-cov",
         "pytest-flask",
         "pytest-mock==1.13.0",
